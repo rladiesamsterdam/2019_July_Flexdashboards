@@ -1,0 +1,62 @@
+---
+title: "The name of the dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(DT)
+source("Exercise#2 - Value boxes, table and interactive graph/Objects_for_the_dashboard.R")
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Median government expenditure on education, total (% of GDP)
+
+```{r}
+valueBox(icon = "fa-money-bill-alt", value = paste0(median_expenditure, " %"), color = "green")
+```
+
+### Title 2
+
+```{r}
+valueBox(icon = "fa-...", value = paste0(..., " %"))
+```
+
+### Title 3
+
+```{r}
+valueBox(icon = "fa-...", value = paste0(..., " %"), color ="...")
+```
+
+### Title 4
+
+```{r}
+valueBox(icon = "fa-...", value = paste0(..., " %"), color ="...")
+```
+
+### Title 5
+
+```{r}
+valueBox(icon = "fa-...", value = paste0(..., " %"), color ="...")
+```
+
+Row
+-------------------------------------------------
+### Adjusted net enrollment rate, primary (% of primary school age children)	
+
+```{r}
+#Place here ggplotly object of the timeseries 
+```
+
+
+### Frequencies of compulsory education years in 2017 globally {data-width=200}
+
+```{r}
+#Place here compulsory_count object followed by the pipe and DT::datatable(rownames = FALSE) function
+```
+
